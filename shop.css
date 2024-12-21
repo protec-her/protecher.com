@@ -1,0 +1,231 @@
+body {
+    height: 100vw;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #BE9CCA, #916da2, #41185A);
+    padding: 0;
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+@font-face {
+    font-family: 'Star';
+    src: url('star.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Hugh'; /* Replace with your font name */
+    src: url('hugh.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face{
+    font-family: 'modernline';
+    src: url('modernline.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face{
+    font-family: 'bastliga';
+    src: url('BastligaOne.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family: 'chopin';
+    src: url('ChopinScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face{
+    font-family: 'vibes';
+    src: url('GreatVibes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family: 'lucy';
+    src: url('Lucy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Container for the navigation bar and hearts */
+  /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: #41185A  ;
+    box-shadow: 0 10px 15px rgba(239, 234, 234, 0.1);
+    height: 60px;
+    overflow: hidden;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: fixed; /* Fix the position */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it appears above other content */
+    transition: all 0.5s ease;
+  
+  }
+  
+  .topnav a {
+    color: #EBF4F6;
+    text-align: center;
+    transform: translateX(4px);
+    font-family: 'star';
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.5s ease; /* Smooth transition for the hover effect */
+  }
+
+  /* Style the links inside the navigation bar */
+
+
+  .topnavscrolled {
+    background-color: white;
+  }
+
+  .topnavscrolled a {
+    color: #41185A; /* Color when scrolled */
+  }
+  
+  /* Add keyframe animation for bold and underline effect */
+  @keyframes highlight {
+    0% {
+      font-weight: normal;
+      text-decoration: none;
+    }
+    100% {
+      /* font-weight: bold; */
+      text-decoration: underline;
+    }
+  }
+  
+  /* Change the text style on hover */
+  .topnav a:hover {
+    animation: highlight 0.5s forwards;
+    font-size: 26px;
+  }
+  
+  /* Increase the height of the navigation bar on hover */
+  .topnav:hover {
+    height: 100px; /* Adjust the height as needed */
+  }
+  
+  .topnav a.active { /* Gold color for the active link */ 
+    font-weight: bold;
+    text-shadow: black; /* Make it bold */}
+
+/* style.css */
+.product-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row-reverse; /* Change to row-reverse to swap image and text */
+    background-color: rgba(239, 232, 239, 0.4);
+    border: 1px solid #ccc; /* Optional border */
+    transform: translateX(15px) translateY(175px);
+    padding: 20px;
+    margin: 20px auto; /* Center the container */
+    height: 345px;
+    max-width: 800px; /* Set a maximum width */
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+
+.product-image {
+    flex: 1; /* Take up available space */
+    margin-left: 20px; /* Add spacing between image and details */
+    text-align: center; /* Center the image horizontally */
+}
+
+.product-details {
+    flex: 2; /* Take up more space for details */
+}
+
+.product-image img {
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+    border: 5px solid #ddd;
+    padding: 0px;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.product-details h1 {
+    margin-top: 0; /* Remove default top margin for h1 */
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #380632;
+    margin-bottom: 10px;
+}
+
+
+.description {
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.product-details h1{
+    color: #380632;
+    font-family: 'star';
+}
+
+
+.product-details ul {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.actions button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    border: none;
+    background-color: #380632; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.actions button:hover {
+    background-color: #fdfafa; /* Darker green on hover */
+    color: #380632;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .product-container {
+        flex-direction: column; /* Stack image and details vertically */
+    }
+    .product-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #BE9CCA, #916da2, #41185A);
+    padding: 0;
+}
+
+/* Header and Navigation */
+header {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+@font-face {
+    font-family: 'Star';
+    src: url('star.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Hugh'; /* Replace with your font name */
+    src: url('hugh.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face{
+    font-family: 'modernline';
+    src: url('modernline.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face{
+    font-family: 'bastliga';
+    src: url('BastligaOne.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family: 'chopin';
+    src: url('ChopinScript.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face{
+    font-family: 'vibes';
+    src: url('GreatVibes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face{
+    font-family: 'lucy';
+    src: url('Lucy.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  /* Container for the navigation bar and hearts */
+  /* Add a black background color to the top navigation */
+  .topnav {
+    background-color: #41185A  ;
+    box-shadow: 0 10px 15px rgba(239, 234, 234, 0.1);
+    height: 60px;
+    overflow: hidden;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: fixed; /* Fix the position */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it appears above other content */
+    transition: all 0.5s ease;
+  
+  }
+  
+  .topnav a {
+    color: #EBF4F6;
+    text-align: center;
+    transform: translateX(4px);
+    font-family: 'star';
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.5s ease; /* Smooth transition for the hover effect */
+  }
+
+  /* Style the links inside the navigation bar */
+
+
+  .topnavscrolled {
+    background-color: white;
+  }
+
+  .topnavscrolled a {
+    color: #41185A; /* Color when scrolled */
+  }
+  
+  /* Add keyframe animation for bold and underline effect */
+  @keyframes highlight {
+    0% {
+      font-weight: normal;
+      text-decoration: none;
+    }
+    100% {
+      /* font-weight: bold; */
+      text-decoration: underline;
+    }
+  }
+  
+  /* Change the text style on hover */
+  .topnav a:hover {
+    animation: highlight 0.5s forwards;
+    font-size: 26px;
+  }
+  
+  /* Increase the height of the navigation bar on hover */
+  .topnav:hover {
+    height: 100px; /* Adjust the height as needed */
+  }
+  
+  .topnav a.active { /* Gold color for the active link */ 
+    font-weight: bold;
+    text-shadow: black; /* Make it bold */}
+
+  
+
+/* Main Content */
+main {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+
+h1 {
+    font-family: 'star';
+    font-size: 36px;
+    color: #41185A;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+ul {
+    list-style: disc;
+    margin: 10px auto;
+    padding: 0;
+    max-width: 600px;
+    text-align: left;
+}
+
+ul li {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.team-member {
+    margin: 20px 0;
+    padding: 15px;
+    background: rgba(240, 238, 238, 0.3);
+    border-radius: 8px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    transition: 0.2s ease;
+}
+
+.team-member:hover{
+  transform: scale(1.005);
+  background: rgba(255, 255, 255, 1.8);
+
+}
+
+.team-member h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    color: #41185A;
+    margin-bottom: 5px;
+}
+
+
+.contact{
+  color: white;
+  transition: 0.5s all ease;
+}
+
+.contact h2{
+  font-family: 'star';
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.contact ul {
+  color: white;
+    list-style: none;
+    padding: 0;
+}
+
+.contact ul li {
+    text-align: center;
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Left-to-right animation keyframes */
+@keyframes slideIn {
+  0% {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* General animation style for text elements */
+.animated-text {
+  opacity: 0; /* Initially invisible */
+  animation: slideIn 1s ease forwards;
+}
+
+/* Add delays for sequential animation */
+.animated-text:nth-child(1) {
+  animation-delay: 0.2s; /* First element appears immediately */
+}
+
+.animated-text:nth-child(2) {
+  animation-delay: 0.6s; /* Second element appears after the first */
+}
+
+.animated-text:nth-child(3) {
+  animation-delay: 1s; /* Third element appears after the second */
+}
+
+.animated-text:nth-child(4) {
+  animation-delay: 1.4s; /* Fourth element appears after the third */
+}

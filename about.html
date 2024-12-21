@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - PROTECHER</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header>
+        <div class="topnav">
+            <a class="active" href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <!-- <a href="#contact">Contact</a> -->
+            <a href="about.html">About</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- New Animated Text Section -->
+        <section>
+            <h1 class="animated-text">Welcome to Our Website</h1>
+            <p class="animated-text">We provide the best services to meet your needs.</p>
+            <ul>
+                <li class="animated-text">Quality Assurance</li>
+                <li class="animated-text">Customer Satisfaction</li>
+                <li class="animated-text">24/7 Support</li>
+            </ul>
+        </section>
+
+        <!-- Existing Sections -->
+        <section class="vision">
+            <h1 class="animated-text">Our Vision</h1>
+            <p class="animated-text">At PROTECHER, our vision is to create a world where safety and style go hand in hand. We are dedicated to empowering individuals with innovative, portable, and effective tools that enhance personal security while reflecting their personal taste.</p>
+        </section>
+
+        <section class="slogan">
+            <h1 class="animated-text">Slogan</h1>
+            <p class="animated-text"><em>“Safety in Style – Always by Your Side.”</em></p>
+        </section>
+
+        <section class="product">
+            <h1 class="animated-text">Our Product</h1>
+            <p class="animated-text">Our flagship product, <strong>PROTECHER</strong>, is the ultimate safety companion. Designed with a compact and portable form factor, it’s lightweight, easy to carry, and irresistibly cute – perfect for our female audience.</p>
+            <ul>
+                <li class="animated-text"><strong>Concealed Knife:</strong> For emergency defense.</li>
+                <li class="animated-text"><strong>Pepper Spray:</strong> To fend off potential threats.</li>
+                <li class="animated-text"><strong>GPS Tracker:</strong> Keep your loved ones informed of your location.</li>
+                <li class="animated-text"><strong>Loud Alarm:</strong> Draw attention and deter attackers.</li>
+            </ul>
+            <p class="animated-text">Crafted with a durable silicone body, PROTECHER ensures unbreakable reliability and protection for the advanced systems inside.</p>
+        </section>
+
+        <section class="team">
+            <h1 class="animated-text">Meet the Team</h1>
+            <div class="team-member">
+                <h2 class="animated-text">Mehdia Rizvi - Group Leader</h2>
+                <p class="animated-text">Incharge of the team, finalizing all the decisions and ensuring quality in each and everything.</p>
+            </div>
+            <div class="team-member">
+                <h2 class="animated-text">Afaf Saad</h2>
+                <p class="animated-text">Creative mind of the group, taking part in all the creative work and ideas. Such as designing the product and the logo.</p>
+            </div>
+            <div class="team-member">
+                <h2 class="animated-text">Haris Hussain</h2>
+                <p class="animated-text">Incharge of providing the market analysis and insights of the product, taking surveys and feedback to ensure high quality.</p>
+            </div>
+            <div class="team-member">
+                <h2 class="animated-text">Taha Mufti</h2>
+                <p class="animated-text">Providing all the needed materials to the team and also assisting in various different tasks.</p>
+            </div>
+            <div class="team-member">
+                <h2 class="animated-text">Shaheer</h2>
+                <p class="animated-text">Incharge of the marketing side of the product, playing a significant role in the making of the TVC ad.
+                </p>
+            </div>
+            <!-- <div class="team-member">
+                <h2 class="animated-text">Awabi – Website Maker</h2>
+                <p class="animated-text"> I took alot of help from AI so nthn impressive innit.</p>
+            </div> -->
+
+        </section>
+
+        <section class="contact">
+            <h2 class= "animated-text">Special Thanks to Awabi for making the website innit. </h2>
+            <h1 class="animated-text">Contact Us</h1>
+            <p class="animated-text">📞 <strong>Contact Number:</strong> +92-300-1234567</p>
+            <p class="animated-text">📧 <strong>Email:</strong> support@protecher.com</p>
+            <p class="animated-text">📍 <strong>Location:</strong> Karachi, Pakistan</p>
+            <p class="animated-text">Follow us on social media to stay updated on new launches and promotions:</p>
+            <ul>
+                <li class="animated-text"><strong>Instagram:</strong> @Protecher</li>
+                <li class="animated-text"><strong>Facebook:</strong> @Protecher</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        window.addEventListener('scroll', function () {
+            // Calculate the current scroll position
+            const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+            console.log(scrollPosition); // For debugging
+    
+            // Adjust trigger height for better scroll responsiveness
+            const triggerHeightFooter = 1063; // Adjust as per your design, smaller for testing
+    
+            // Select the header element
+            const header = document.querySelector('.topnav');
+    
+            if (scrollPosition > triggerHeightFooter) {
+                header.classList.add('topnavscrolled');
+                // Change the color of the navbar links
+                document.querySelectorAll('.topnav a').forEach(link => {
+                    link.classList.add('scrolled-link');
+                });
+            } else {
+                header.classList.remove('topnavscrolled');
+                // Revert the color of the navbar links
+                document.querySelectorAll('.topnav a').forEach(link => {
+                    link.classList.remove('scrolled-link');
+                });
+            }
+        });
+    </script>
+    
+</body>
+</html>

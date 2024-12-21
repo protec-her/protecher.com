@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProtecHer</title>
+  <link rel="stylesheet" href="index.css">
+  <script>
+    function navigateToPage(buttonId) {
+      if (buttonId === "ShopNow") {
+        window.location.href = 'shop.html';
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="topnav">
+    <a class="active" href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+  </div>
+
+  <div class="ProtecToolText">
+    <h1 class="title">ProtecHer</h1>
+  </div>
+
+  <div class="MainLogo">
+    <img src="protecher.png" alt="ProtecHer Logo">
+  </div>
+
+  <div id="purpleBox" class="hidden">
+    <p class="animated-text">“Safety in Style – Always by Your Side.”
+    </p>
+    <div class="button-wrapper">
+      <button id="ShopNow" onclick="navigateToPage(this.id)">Shop Now!</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 PROTECHER. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+      const triggerHeight = 410; 
+
+      const purpleBox = document.getElementById('purpleBox');
+      
+      console.log('Scroll Position:', scrollPosition); // Debug message
+
+      if (scrollPosition > triggerHeight) {
+        purpleBox.classList.remove('hidden');
+        purpleBox.classList.add('show');
+        console.log('Purple Box should be visible'); // Debug message
+      } else {
+        purpleBox.classList.remove('show');
+        purpleBox.classList.add('hidden');
+        console.log('Purple Box should be hidden'); // Debug message
+      }
+
+      const footer = document.querySelector('footer');
+      const triggerHeightFooter = 380;
+
+      if (scrollPosition > triggerHeightFooter) {
+        footer.classList.add('scrolled');
+      } else {
+        footer.classList.remove('scrolled');
+      }
+
+      const header = document.querySelector('.topnav');
+      if (scrollPosition > triggerHeightFooter) {
+        header.classList.add('topnavscrolled');
+        document.querySelectorAll('.topnav a').forEach(link => {
+          link.classList.add('scrolled-link');
+        });
+      } else {
+        header.classList.remove('topnavscrolled');
+        document.querySelectorAll('.topnav a').forEach(link => {
+          link.classList.remove('scrolled-link');
+        });
+      }
+    });
+  </script>
+</body>
+</html>
